@@ -4,7 +4,7 @@ function searchCities() {
     const limit = 5;
     const APIkey = "0cf12d75c6144bfff43b1d1d79cf5b40";
 
-    const apiEndpoint = `http://api.openweathermap.org/geo/1.0/direct?q=${cityInput}&limit=${limit}&appid=${APIkey}`
+    const apiEndpoint = `https://api.openweathermap.org/geo/1.0/direct?q=${cityInput}&limit=${limit}&appid=${APIkey}`
 
     fetch(apiEndpoint)
         .then(response => response.json())
