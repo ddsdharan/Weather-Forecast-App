@@ -11,6 +11,16 @@ function searchCities() {
         .then(data => {
             searchResults.innerHTML = '';
 
+            if (cityInput.trim() !== '') {
+                glassContainer.style.display = 'flex';
+                weatherCard.style.display = 'flex';
+                date.style.display = 'block'
+            } else {
+                glassContainer.style.display = 'none';
+                weatherCard.style.display = 'none';
+                date.style.display = 'none';
+            }
+
             data.forEach(result => {
                 const listItem = document.createElement('li');
                 listItem.innerText = result.name + ", " + result.state + ", " + result.country;
@@ -24,7 +34,6 @@ function searchCities() {
         .catch(error => {
             console.error('Error fetching cities:', error);
         });
-
 
     function searchWeather(latitude, longitude) {
         const weatherTitle = document.getElementById('weatherTitle');
@@ -47,7 +56,7 @@ function searchCities() {
                 weatherTitle.innerText = data.name + ", " + data.sys.country;
                 wicon.src = "https://openweathermap.org/img/wn/" + data.weather[0].icon + "@2x.png";
                 mainWeather.innerText = data.weather[0].main;
-                weatherDescription.innerText = data.weather[0].description;
+                weatherDescription.innerText = data.weather[0].description.toUpperCase();
                 temperature.innerText = "Temperature: " + data.main.temp + "°C";
                 feelsLike.innerText = "Feels Like: " + data.main.feels_like + "°C";
                 atmPressure.innerText = "Atm-Pressure: " + data.main.pressure + "hPa";

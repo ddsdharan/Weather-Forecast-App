@@ -10,7 +10,7 @@
     integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <div class="navbar bg-base-100">
+    <div data-theme="coffee" class="navbar bg-base-100">
         <div class="navbar-start">
           <a class="btn btn-ghost text-xl">Weather Forecast</a>
         </div>
@@ -22,7 +22,7 @@
       </div>
     
  <div class="container">
-    <div class="glass">
+    <div class="glass" id="glassContainer">
 
       <div class="containerOne">
         <div class="card w-96" id="weatherCard">
@@ -38,29 +38,24 @@
           </div>
           
           <div class="card-body">
-            <h2 class="card-title" id="weatherTitle">Location</h2>
+            <h2 class="card-title" id="weatherTitle"></h2>
             <h4 class="weather-main" id="mainweather"></h4>
             <div class="divider divider-warning"></div> 
             <p id="weatherDescription"></p>
-            <p id="temperature">Temperature</p>
-            <p id="feelslike">Feels like</p>
-            <p id="atmPressure">Atm-Pressure</p>
-            <p id="humidity">Humidity</p>
+            <p id="temperature"></p>
+            <p id="feelslike"></p>
+            <p id="atmPressure"></p>
+            <p id="humidity"></p>
 
           </div>
         </div>
       </div>
-
       <div class="containerTwo">
         <ul id="searchResults" class="list-none p-0 mt-2"></ul>
       </div>
-
-      
-
           </div>
           <p class="timestamp" id="date"></p>
         </div>
-
 <script src="script.js"></script>
 <script src="https://cdn.tailwindcss.com"></script>
 </body>

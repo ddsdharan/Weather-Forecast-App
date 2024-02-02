@@ -60,6 +60,7 @@ ul:hover {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    display: none;
 }
 
 .card-actions {
@@ -76,6 +77,7 @@ ul:hover {
     flex-direction: row-reverse;
     align-items: center;
     width: auto;
+    display: none;
 }
 
 .card-actions {
@@ -88,20 +90,22 @@ ul:hover {
     flex-direction: column;
     align-items: flex-start;
     white-space: nowrap;
+    padding: 1.5em;
+    color: black;
 }
+
+.weather-main{
+    align-self: flex-end;
+    }
 
 .card-title {
-    margin-bottom: 0;
-    padding-bottom: 0;
-    column-gap: 0;
-}
-
-#icon {
-    align-self: flex-start;
+    color: #6b5537;
+    align-self: flex-end;
 }
 
 .timestamp {
     text-align: center;
+    margin: 0;
 }
 
 footer {
@@ -111,9 +115,14 @@ footer {
 
 
 @media only screen and (max-width: 600px) {
+    body {
+        width: 100%;
+    }
+
     .navbar {
         flex-direction: column;
         align-items: stretch;
+        width: 100%;
     }
 
     .navbar-start,
@@ -141,15 +150,12 @@ footer {
     }
     
     .card {
-        margin: 1.5em;
-        /* width: auto; */
-        overflow: auto;
+        overflow: hidden;
         padding: .5em;
         }
 
     .card-body {
         margin: 0;
-        /* padding: 1.5em; */
     }
 
     .glass {
@@ -157,6 +163,7 @@ footer {
         width: auto;
         display: flex;
         flex-direction: column-reverse;
+        display: none;
     }
 
     .container {
@@ -165,6 +172,14 @@ footer {
 
     .card-title {
         margin-bottom: 0;
+    }
+
+    .timestamp {
+        text-align: center;
+        display: block;
+        margin-bottom: 5em;
+        display: block;
+        display: none;
     }
 
     footer {
