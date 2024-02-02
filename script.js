@@ -3,7 +3,6 @@ function searchCities() {
     const searchResults = document.getElementById('searchResults');
     const limit = 5;
     const APIkey = "0cf12d75c6144bfff43b1d1d79cf5b40";
-
     const apiEndpoint = `https://api.openweathermap.org/geo/1.0/direct?q=${cityInput}&limit=${limit}&appid=${APIkey}`
 
     fetch(apiEndpoint)
@@ -48,8 +47,8 @@ function searchCities() {
         const degree = document.getElementById('degree');
         const clouds = document.getElementById('clouds');
         const dateElement = document.getElementById('date');
-
         const apiEndpoint = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${APIkey}&units=metric`;
+
         fetch(apiEndpoint)
             .then(response => response.json())
             .then(data => {
@@ -83,4 +82,3 @@ function searchCities() {
             });
     }
 }
-

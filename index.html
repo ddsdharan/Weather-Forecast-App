@@ -16,53 +16,46 @@
         </div>
         <div class="navbar-end">
             <div class="join">
-                <input class="input input-bordered join-item" id="cityInput" placeholder="Enter a city name" onInput="searchCities()"/>
+                <input class="input input-bordered join-item" id="cityInput" placeholder="Location" onInput="searchCities()"/>
               </div>
         </div>
       </div>
-    
- <div class="container">
-    <div class="glass" id="glassContainer">
-
-      <div class="containerOne">
-        <div class="card w-96" id="weatherCard">
-        <div class="card-actions justify-end">
-        
-              <div id="icon">
-                <img id="wicon" src="" alt="icon">
-                <p id="windSpeed"></p>
-                <p id="degree"></p>
-                <p id="clouds"></p>
+      <div class="container">
+        <div class="glass" id="glassContainer">
+          <div class="containerOne">
+            <div class="card w-96" id="weatherCard">
+              <div class="card-actions justify-end">
+                <div id="icon">
+                  <img id="wicon" src="" alt="icon">
+                  <p id="windSpeed"></p>
+                  <p id="degree"></p>
+                  <p id="clouds"></p>
+                </div>
               </div>
-
+              <div class="card-body">
+                <h2 class="card-title" id="weatherTitle"></h2>
+                <h4 class="weather-main" id="mainweather"></h4>
+                <div class="divider divider-warning"></div>
+                <p id="weatherDescription"></p>
+                <p id="temperature"></p>
+                <p id="feelslike"></p>
+                <p id="atmPressure"></p>
+                <p id="humidity"></p>
+              </div>
+            </div>
           </div>
-          
-          <div class="card-body">
-            <h2 class="card-title" id="weatherTitle"></h2>
-            <h4 class="weather-main" id="mainweather"></h4>
-            <div class="divider divider-warning"></div> 
-            <p id="weatherDescription"></p>
-            <p id="temperature"></p>
-            <p id="feelslike"></p>
-            <p id="atmPressure"></p>
-            <p id="humidity"></p>
-
+          <div class="containerTwo">
+            <ul id="searchResults" class="list-none p-0 mt-2"></ul>
           </div>
         </div>
+        <p class="timestamp" id="date"></p>
       </div>
-      <div class="containerTwo">
-        <ul id="searchResults" class="list-none p-0 mt-2"></ul>
-      </div>
-          </div>
-          <p class="timestamp" id="date"></p>
-        </div>
-<script src="script.js"></script>
-<script src="https://cdn.tailwindcss.com"></script>
-</body>
-<footer data-theme="coffee" class="footer footer-center p-4 bg-base-300 text-base-content">
-    <aside>
+      <script src="script.js"></script>
+      <script src="https://cdn.tailwindcss.com"></script>
+    </body>
+    <footer data-theme="coffee" class="footer footer-center p-4 bg-base-300 text-base-content">
+      <aside>
         <p>Copyright © 2024 - All right reserved by Dhanasasidharan D</p>
-    </aside>
-</footer>
-</html>
-
+      </aside>
+    </footer>
+    </html>
